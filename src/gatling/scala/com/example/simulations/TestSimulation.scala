@@ -14,9 +14,9 @@ class TestSimulation extends Simulation {
     .acceptCharsetHeader("utf-8")
     .disableWarmUp
 
-  val testScn: ScenarioBuilder = scenario("get hello world")
+  val testScn: ScenarioBuilder = scenario("Hello World Scenario")
     .exec(
-      http("").get("/")
+      http("GET /").get("/")
         .check(status.is(200))
         .check(bodyString.is("Hello World!"))
     )
