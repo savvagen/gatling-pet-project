@@ -389,3 +389,165 @@ v2.gatling.test.localhost.testsimulation..all.percentiles99 61 1628255797
 16:16:37.151 [INFO ] i.g.c.s.LogFileReader - First pass done: read 4 lines
 16:16:37.159 [INFO ] i.g.c.s.LogFileReader - Second pass
 16:16:37.177 [INFO ] i.g.c.s.LogFileReader - Second pass: read 4 lines
+16:52:09.036 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - Request '' failed for user 1: j.n.ConnectException: finishConnect(..) failed: Connection refused
+16:52:09.042 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - 
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+Request:
+: KO j.n.ConnectException: finishConnect(..) failed: Connection refused
+=========================
+Session:
+Session(get hello world,1,Map(gatling.http.ssl.sslContexts -> io.gatling.http.util.SslContexts@329805b1, gatling.http.cache.dns -> io.gatling.http.resolver.ShufflingNameResolver@1b36c9dd, gatling.http.cache.baseUrl -> http://localhost:8080),KO,List(),io.gatling.core.protocol.ProtocolComponentsRegistry$$Lambda$420/1109752797@2f4c1302,io.netty.channel.epoll.EpollEventLoop@1b7c473a)
+=========================
+HTTP request:
+GET http://localhost:8080/
+headers=
+accept-charset: utf-8
+accept: */*
+host: localhost:8080
+=========================
+HTTP response:
+<<<<<<<<<<<<<<<<<<<<<<<<<
+16:52:09.999 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - Request '' failed for user 2: j.n.ConnectException: finishConnect(..) failed: Connection refused
+16:52:10.000 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - 
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+Request:
+: KO j.n.ConnectException: finishConnect(..) failed: Connection refused
+=========================
+Session:
+Session(get hello world,2,Map(gatling.http.ssl.sslContexts -> io.gatling.http.util.SslContexts@266566e1, gatling.http.cache.dns -> io.gatling.http.resolver.ShufflingNameResolver@225af6f5, gatling.http.cache.baseUrl -> http://localhost:8080),KO,List(),io.gatling.core.protocol.ProtocolComponentsRegistry$$Lambda$420/1109752797@2f4c1302,io.netty.channel.epoll.EpollEventLoop@5e4bd84a)
+=========================
+HTTP request:
+GET http://localhost:8080/
+headers=
+accept-charset: utf-8
+accept: */*
+host: localhost:8080
+=========================
+HTTP response:
+<<<<<<<<<<<<<<<<<<<<<<<<<
+16:52:11.018 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - Request '' failed for user 3: j.n.ConnectException: finishConnect(..) failed: Connection refused
+16:52:11.019 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - 
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+Request:
+: KO j.n.ConnectException: finishConnect(..) failed: Connection refused
+=========================
+Session:
+Session(get hello world,3,Map(gatling.http.ssl.sslContexts -> io.gatling.http.util.SslContexts@684b34f8, gatling.http.cache.dns -> io.gatling.http.resolver.ShufflingNameResolver@6c74bd29, gatling.http.cache.baseUrl -> http://localhost:8080),KO,List(),io.gatling.core.protocol.ProtocolComponentsRegistry$$Lambda$420/1109752797@2f4c1302,io.netty.channel.epoll.EpollEventLoop@648c94da)
+=========================
+HTTP request:
+GET http://localhost:8080/
+headers=
+accept-charset: utf-8
+accept: */*
+host: localhost:8080
+=========================
+HTTP response:
+<<<<<<<<<<<<<<<<<<<<<<<<<
+16:52:11.537 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - Request '' failed for user 4: j.n.ConnectException: finishConnect(..) failed: Connection refused
+16:52:11.539 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - 
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+Request:
+: KO j.n.ConnectException: finishConnect(..) failed: Connection refused
+=========================
+Session:
+Session(get hello world,4,Map(gatling.http.ssl.sslContexts -> io.gatling.http.util.SslContexts@20a4af39, gatling.http.cache.dns -> io.gatling.http.resolver.ShufflingNameResolver@249b2ff5, gatling.http.cache.baseUrl -> http://localhost:8080),KO,List(),io.gatling.core.protocol.ProtocolComponentsRegistry$$Lambda$420/1109752797@2f4c1302,io.netty.channel.epoll.EpollEventLoop@2a62b5bc)
+=========================
+HTTP request:
+GET http://localhost:8080/
+headers=
+accept-charset: utf-8
+accept: */*
+host: localhost:8080
+=========================
+HTTP response:
+<<<<<<<<<<<<<<<<<<<<<<<<<
+16:52:12.034 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - Request '' failed for user 5: j.n.ConnectException: finishConnect(..) failed: Connection refused
+16:52:12.035 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - 
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+Request:
+: KO j.n.ConnectException: finishConnect(..) failed: Connection refused
+=========================
+Session:
+Session(get hello world,5,Map(gatling.http.ssl.sslContexts -> io.gatling.http.util.SslContexts@6ed079bc, gatling.http.cache.dns -> io.gatling.http.resolver.ShufflingNameResolver@6aefe0be, gatling.http.cache.baseUrl -> http://localhost:8080),KO,List(),io.gatling.core.protocol.ProtocolComponentsRegistry$$Lambda$420/1109752797@2f4c1302,io.netty.channel.epoll.EpollEventLoop@53de625d)
+=========================
+HTTP request:
+GET http://localhost:8080/
+headers=
+accept-charset: utf-8
+accept: */*
+host: localhost:8080
+=========================
+HTTP response:
+<<<<<<<<<<<<<<<<<<<<<<<<<
+16:52:12.557 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - Request '' failed for user 6: j.n.ConnectException: finishConnect(..) failed: Connection refused
+16:52:12.559 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - 
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+Request:
+: KO j.n.ConnectException: finishConnect(..) failed: Connection refused
+=========================
+Session:
+Session(get hello world,6,Map(gatling.http.ssl.sslContexts -> io.gatling.http.util.SslContexts@7231cb67, gatling.http.cache.dns -> io.gatling.http.resolver.ShufflingNameResolver@760e41f9, gatling.http.cache.baseUrl -> http://localhost:8080),KO,List(),io.gatling.core.protocol.ProtocolComponentsRegistry$$Lambda$420/1109752797@2f4c1302,io.netty.channel.epoll.EpollEventLoop@535779e4)
+=========================
+HTTP request:
+GET http://localhost:8080/
+headers=
+accept-charset: utf-8
+accept: */*
+host: localhost:8080
+=========================
+HTTP response:
+<<<<<<<<<<<<<<<<<<<<<<<<<
+16:52:13.057 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - Request '' failed for user 7: j.n.ConnectException: finishConnect(..) failed: Connection refused
+16:52:13.058 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - 
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+Request:
+: KO j.n.ConnectException: finishConnect(..) failed: Connection refused
+=========================
+Session:
+Session(get hello world,7,Map(gatling.http.ssl.sslContexts -> io.gatling.http.util.SslContexts@648bb1b7, gatling.http.cache.dns -> io.gatling.http.resolver.ShufflingNameResolver@60b439fe, gatling.http.cache.baseUrl -> http://localhost:8080),KO,List(),io.gatling.core.protocol.ProtocolComponentsRegistry$$Lambda$420/1109752797@2f4c1302,io.netty.channel.epoll.EpollEventLoop@53fd0d10)
+=========================
+HTTP request:
+GET http://localhost:8080/
+headers=
+accept-charset: utf-8
+accept: */*
+host: localhost:8080
+=========================
+HTTP response:
+<<<<<<<<<<<<<<<<<<<<<<<<<
+16:52:13.415 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - Request '' failed for user 8: j.n.ConnectException: finishConnect(..) failed: Connection refused
+16:52:13.416 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - 
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+Request:
+: KO j.n.ConnectException: finishConnect(..) failed: Connection refused
+=========================
+Session:
+Session(get hello world,8,Map(gatling.http.ssl.sslContexts -> io.gatling.http.util.SslContexts@3b001c23, gatling.http.cache.dns -> io.gatling.http.resolver.ShufflingNameResolver@3f3f9f9b, gatling.http.cache.baseUrl -> http://localhost:8080),KO,List(),io.gatling.core.protocol.ProtocolComponentsRegistry$$Lambda$420/1109752797@2f4c1302,io.netty.channel.epoll.EpollEventLoop@6c0d9d86)
+=========================
+HTTP request:
+GET http://localhost:8080/
+headers=
+accept-charset: utf-8
+accept: */*
+host: localhost:8080
+=========================
+HTTP response:
+<<<<<<<<<<<<<<<<<<<<<<<<<
+16:52:13.746 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - Request '' failed for user 9: j.n.ConnectException: finishConnect(..) failed: Connection refused
+16:52:13.747 [DEBUG] i.g.h.e.r.DefaultStatsProcessor - 
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+Request:
+: KO j.n.ConnectException: finishConnect(..) failed: Connection refused
+=========================
+Session:
+Session(get hello world,9,Map(gatling.http.ssl.sslContexts -> io.gatling.http.util.SslContexts@2a2297e0, gatling.http.cache.dns -> io.gatling.http.resolver.ShufflingNameResolver@2e1d167c, gatling.http.cache.baseUrl -> http://localhost:8080),KO,List(),io.gatling.core.protocol.ProtocolComponentsRegistry$$Lambda$420/1109752797@2f4c1302,io.netty.channel.epoll.EpollEventLoop@4ce1d6d0)
+=========================
+HTTP request:
+GET http://localhost:8080/
+headers=
+accept-charset: utf-8
+accept: */*
+host: localhost:8080
+=========================
+HTTP response:
+<<<<<<<<<<<<<<<<<<<<<<<<<

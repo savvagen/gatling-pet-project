@@ -21,10 +21,10 @@ class TestSimulation extends Simulation {
         .check(bodyString.is("Hello World!"))
     )
 
-  setUp(testScn.inject(constantUsersPerSec(20) during(2.minutes))
+  setUp(testScn.inject(constantUsersPerSec(20) during(5.minutes))
     .throttle(
-      reachRps(10) in(10 seconds),
-      holdFor(2 minutes)
+      reachRps(10) in(20 seconds),
+      holdFor(5.minutes)
     ))
     .maxDuration(5.minutes)
     .protocols(httpConf)
