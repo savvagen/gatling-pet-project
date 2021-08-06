@@ -1,0 +1,92 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'scala'
+    id 'io.gatling.gradle' version "3.4.2"
+}
+
+ext {
+    scalaVersion = '2.12.13'
+    gatlingVersion = '3.4.2'
+}
+
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        scala {
+            srcDirs = ['src/main/scala']
+        }
+    }
+    test {
+        scala {
+            srcDirs = ['src/test/scala']
+        }
+    }
+    gatling {
+        scala.srcDirs = ["src/gatling/scala", "src/main/scala"]
+        resources.srcDir "src/gatling/resources"
+    }
+}
+
+
+dependencies {
+    implementation "org.scala-lang:scala-library:$scalaVersion"
+    implementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.6.2'
+    // Gatling Dependencies
+    gatlingImplementation(
+            "io.gatling:gatling-core:${gatlingVersion}",
+            "io.gatling.highcharts:gatling-charts-highcharts:${gatlingVersion}",
+            "io.gatling:gatling-jdbc:${gatlingVersion}",
+            "io.gatling:gatling-graphite:${gatlingVersion}",
+            'io.gatling:jsonpath_2.12:0.7.0', // Scala 2.12
+    )
+    gatlingImplementation 'org.apache.commons:commons-lang3:3.4'
+}
+
+
+
+gatling {
+    toolVersion = gatlingVersion
+    simulations = {
+        include "**/simulations/TestSimulation.scala"
+    }
+    // include classes and resources from src/main
+    includeMainOutput = true
+    // include classes and resources from src/test
+    includeTestOutput = true
+    jvmArgs = ['-server', '-Xms3g', '-Xmx5g', '-XX:-UseGCOverheadLimit',
+               '-Dgatling.useOldJenkinsJUnitSupport=true',
+               '-XX:+HeapDumpOnOutOfMemoryError',
+               '-XX:+UseG1GC',
+               '-XX:+ParallelRefProcEnabled',
+               '-Djava.net.preferIPv4Stack=true',
+               '-Djava.net.preferIPv6Addresses=false'
+    ]
+    systemProperties = [
+            'file.encoding': 'UTF-8',
+            'gatling.useOldJenkinsJUnitSupport': true,
+            'gatling.conf.file': "gatling.conf",
+    ]
+    //logLevel = "WARN" // The default Gatling console log level if no logback.xml present in the configuration folder
+    //logHttp = "FAILURES" //Verbosity of logging HTTP requests performed by Gatling, must be one of: 'NONE' - do not log, 'ALL' - log all requests, 'FAILURES' - only failed requests
+}
+
+
+//task gatlingRunner(type: JavaExec, dependsOn: classes) {
+//    main = 'absoft.com.beats.GatlingRunner'
+//    classpath sourceSets.gatling.runtimeClasspath
+//    classpath configurations.runtime
+//    jvmArgs = ['-server', '-Xms7g', '-Xmx9g', '-XX:-UseGCOverheadLimit']
+//}
+
+wrapper {
+    gradleVersion = "6.1"
+}
+

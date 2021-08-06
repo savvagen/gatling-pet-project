@@ -1,0 +1,391 @@
+16:16:35.845 [TRACE] i.g.a.Gatling$ - Starting
+16:16:35.849 [DEBUG] i.g.c.c.GatlingConfiguration$ - Gatling will try to use 'gatling.conf' as custom config file.
+16:16:35.972 [WARN ] i.g.c.c.GatlingConfiguration$ - Your Gatling configuration options are outdated, some properties have been renamed or removed.
+Please update (check gatling.conf in Gatling bundle, or gatling-defaults.conf in gatling-core jar).
+Enabled obsolete properties:
+'gatling.http.ahc.requestTimeout' was renamed into gatling.http.requestTimeout and will be removed in the next minor release. Please rename.
+'gatling.http.ahc.pooledConnectionIdleTimeout' was renamed into gatling.http.pooledConnectionIdleTimeout and will be removed in the next minor release. Please rename.
+'gatling.http.ahc.enableHostnameVerification' was renamed into gatling.http.enableHostnameVerification and will be removed in the next minor release. Please rename.
+16:16:36.036 [TRACE] i.g.a.Gatling$ - Configuration loaded
+16:16:36.237 [INFO ] a.e.s.Slf4jLogger - Slf4jLogger started
+16:16:36.487 [DEBUG] i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+16:16:36.500 [DEBUG] i.n.u.i.PlatformDependent0 - -Dio.netty.noUnsafe: false
+16:16:36.500 [DEBUG] i.n.u.i.PlatformDependent0 - Java version: 8
+16:16:36.501 [DEBUG] i.n.u.i.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+16:16:36.501 [DEBUG] i.n.u.i.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+16:16:36.501 [DEBUG] i.n.u.i.PlatformDependent0 - java.nio.Buffer.address: available
+16:16:36.502 [DEBUG] i.n.u.i.PlatformDependent0 - direct buffer constructor: available
+16:16:36.502 [DEBUG] i.n.u.i.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+16:16:36.502 [DEBUG] i.n.u.i.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+16:16:36.502 [DEBUG] i.n.u.i.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): available
+16:16:36.503 [DEBUG] i.n.u.i.PlatformDependent - sun.misc.Unsafe: available
+16:16:36.503 [DEBUG] i.n.u.i.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+16:16:36.503 [DEBUG] i.n.u.i.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+16:16:36.504 [DEBUG] i.n.u.i.PlatformDependent - -Dio.netty.maxDirectMemory: 7430733824 bytes
+16:16:36.504 [DEBUG] i.n.u.i.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+16:16:36.504 [DEBUG] i.n.u.i.CleanerJava6 - java.nio.ByteBuffer.cleaner(): available
+16:16:36.504 [DEBUG] i.n.u.i.PlatformDependent - -Dio.netty.noPreferDirect: false
+16:16:36.506 [DEBUG] i.n.u.i.NativeLibraryLoader - -Dio.netty.native.workdir: /tmp (io.netty.tmpdir)
+16:16:36.506 [DEBUG] i.n.u.i.NativeLibraryLoader - -Dio.netty.native.deleteLibAfterLoading: true
+16:16:36.506 [DEBUG] i.n.u.i.NativeLibraryLoader - -Dio.netty.native.tryPatchShadedId: true
+16:16:36.508 [DEBUG] i.n.u.i.NativeLibraryLoader - Unable to load the library 'netty_transport_native_epoll_x86_64', trying other loading mechanism.
+java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1875)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:872)
+	at java.lang.System.loadLibrary(System.java:1124)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:385)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:377)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:341)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:250)
+	at io.netty.channel.epoll.Native.<clinit>(Native.java:69)
+	at io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:39)
+	at io.gatling.netty.util.Transports.newEventLoopGroup(Transports.java:41)
+	at io.gatling.app.Gatling$.start(Gatling.scala:74)
+	at io.gatling.app.Gatling$.fromMap(Gatling.scala:40)
+	at com.example.GatlingRunner$.main(GatlingRunner.scala:16)
+	at com.example.GatlingRunner.main(GatlingRunner.scala)
+16:16:36.509 [DEBUG] i.n.u.i.NativeLibraryLoader - netty_transport_native_epoll_x86_64 cannot be loaded from java.library.path, now trying export to -Dio.netty.native.workdir: /tmp
+java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1875)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:872)
+	at java.lang.System.loadLibrary(System.java:1124)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:351)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:250)
+	at io.netty.channel.epoll.Native.<clinit>(Native.java:69)
+	at io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:39)
+	at io.gatling.netty.util.Transports.newEventLoopGroup(Transports.java:41)
+	at io.gatling.app.Gatling$.start(Gatling.scala:74)
+	at io.gatling.app.Gatling$.fromMap(Gatling.scala:40)
+	at com.example.GatlingRunner$.main(GatlingRunner.scala:16)
+	at com.example.GatlingRunner.main(GatlingRunner.scala)
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path
+		at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1875)
+		at java.lang.Runtime.loadLibrary0(Runtime.java:872)
+		at java.lang.System.loadLibrary(System.java:1124)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:385)
+		at java.security.AccessController.doPrivileged(Native Method)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:377)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:341)
+		... 9 common frames omitted
+16:16:36.514 [DEBUG] i.n.u.i.NativeLibraryLoader - Successfully loaded the library /tmp/libnetty_transport_native_epoll_x86_643802232141858545965.so
+16:16:36.516 [DEBUG] i.n.u.NetUtil - -Djava.net.preferIPv4Stack: false
+16:16:36.516 [DEBUG] i.n.u.NetUtil - -Djava.net.preferIPv6Addresses: false
+16:16:36.517 [DEBUG] i.n.u.NetUtilInitializations - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+16:16:36.518 [DEBUG] i.n.u.NetUtil - /proc/sys/net/core/somaxconn: 4096
+16:16:36.520 [DEBUG] i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 24
+16:16:36.531 [DEBUG] i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+16:16:36.531 [DEBUG] i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+16:16:36.539 [DEBUG] i.n.u.i.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+16:16:36.542 [TRACE] i.g.a.Gatling$ - ActorSystem instantiated
+16:16:36.544 [TRACE] i.g.a.Gatling$ - Runner instantiated
+16:16:36.551 [TRACE] i.g.app.Runner - Running
+16:16:36.645 [TRACE] i.g.app.Runner - Simulation instantiated
+16:16:36.652 [TRACE] i.g.app.Runner - Simulation params built
+16:16:36.652 [TRACE] i.g.app.Runner - Before hooks executed
+16:16:36.668 [TRACE] i.g.app.Runner - CoreComponents instantiated
+16:16:36.675 [DEBUG] i.n.u.i.NativeLibraryLoader - Unable to load the library 'netty_tcnative_linux_x86_64', trying other loading mechanism.
+java.lang.UnsatisfiedLinkError: no netty_tcnative_linux_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1875)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:872)
+	at java.lang.System.loadLibrary(System.java:1124)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:385)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:377)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:341)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:96)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:590)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:136)
+	at io.gatling.http.util.SslContextsFactory.<init>(SslContexts.scala:53)
+	at io.gatling.http.engine.HttpEngine$.apply(HttpEngine.scala:49)
+	at io.gatling.http.protocol.HttpProtocol$$anon$1.newComponents(HttpProtocol.scala:52)
+	at io.gatling.core.protocol.ProtocolComponentsRegistry.$anonfun$components$1(Protocol.scala:69)
+	at scala.collection.mutable.HashMap.getOrElseUpdate(HashMap.scala:86)
+	at io.gatling.core.protocol.ProtocolComponentsRegistry.componentsFactory$1(Protocol.scala:69)
+	at io.gatling.core.protocol.ProtocolComponentsRegistry.comps$1(Protocol.scala:72)
+	at io.gatling.core.protocol.ProtocolComponentsRegistry.$anonfun$components$4(Protocol.scala:74)
+	at scala.collection.mutable.HashMap.getOrElseUpdate(HashMap.scala:86)
+	at io.gatling.core.protocol.ProtocolComponentsRegistry.components(Protocol.scala:74)
+	at io.gatling.http.action.HttpActionBuilder.lookUpHttpComponents(HttpActionBuilder.scala:26)
+	at io.gatling.http.action.HttpRequestActionBuilder.build(HttpRequestActionBuilder.scala:33)
+	at io.gatling.core.structure.BuildAction.$anonfun$build$1(BuildAction.scala:28)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at io.gatling.core.structure.BuildAction.build(BuildAction.scala:27)
+	at io.gatling.core.structure.BuildAction.build$(BuildAction.scala:26)
+	at io.gatling.core.structure.ScenarioBuilder.build(StructureBuilder.scala:51)
+	at io.gatling.core.structure.PopulationBuilder.build(PopulationBuilder.scala:100)
+	at io.gatling.core.scenario.SimulationParams.buildScenario(Simulation.scala:170)
+	at io.gatling.core.scenario.SimulationParams.$anonfun$scenarios$1(Simulation.scala:174)
+	at scala.collection.immutable.List.map(List.scala:293)
+	at io.gatling.core.scenario.SimulationParams.scenarios(Simulation.scala:174)
+	at io.gatling.app.Runner.run0(Runner.scala:82)
+	at io.gatling.app.Runner.run(Runner.scala:52)
+	at io.gatling.app.Gatling$.start(Gatling.scala:80)
+	at io.gatling.app.Gatling$.fromMap(Gatling.scala:40)
+	at com.example.GatlingRunner$.main(GatlingRunner.scala:16)
+	at com.example.GatlingRunner.main(GatlingRunner.scala)
+16:16:36.675 [DEBUG] i.n.u.i.NativeLibraryLoader - netty_tcnative_linux_x86_64 cannot be loaded from java.library.path, now trying export to -Dio.netty.native.workdir: /tmp
+java.lang.UnsatisfiedLinkError: no netty_tcnative_linux_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1875)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:872)
+	at java.lang.System.loadLibrary(System.java:1124)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:351)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:96)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:590)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:136)
+	at io.gatling.http.util.SslContextsFactory.<init>(SslContexts.scala:53)
+	at io.gatling.http.engine.HttpEngine$.apply(HttpEngine.scala:49)
+	at io.gatling.http.protocol.HttpProtocol$$anon$1.newComponents(HttpProtocol.scala:52)
+	at io.gatling.core.protocol.ProtocolComponentsRegistry.$anonfun$components$1(Protocol.scala:69)
+	at scala.collection.mutable.HashMap.getOrElseUpdate(HashMap.scala:86)
+	at io.gatling.core.protocol.ProtocolComponentsRegistry.componentsFactory$1(Protocol.scala:69)
+	at io.gatling.core.protocol.ProtocolComponentsRegistry.comps$1(Protocol.scala:72)
+	at io.gatling.core.protocol.ProtocolComponentsRegistry.$anonfun$components$4(Protocol.scala:74)
+	at scala.collection.mutable.HashMap.getOrElseUpdate(HashMap.scala:86)
+	at io.gatling.core.protocol.ProtocolComponentsRegistry.components(Protocol.scala:74)
+	at io.gatling.http.action.HttpActionBuilder.lookUpHttpComponents(HttpActionBuilder.scala:26)
+	at io.gatling.http.action.HttpRequestActionBuilder.build(HttpRequestActionBuilder.scala:33)
+	at io.gatling.core.structure.BuildAction.$anonfun$build$1(BuildAction.scala:28)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at io.gatling.core.structure.BuildAction.build(BuildAction.scala:27)
+	at io.gatling.core.structure.BuildAction.build$(BuildAction.scala:26)
+	at io.gatling.core.structure.ScenarioBuilder.build(StructureBuilder.scala:51)
+	at io.gatling.core.structure.PopulationBuilder.build(PopulationBuilder.scala:100)
+	at io.gatling.core.scenario.SimulationParams.buildScenario(Simulation.scala:170)
+	at io.gatling.core.scenario.SimulationParams.$anonfun$scenarios$1(Simulation.scala:174)
+	at scala.collection.immutable.List.map(List.scala:293)
+	at io.gatling.core.scenario.SimulationParams.scenarios(Simulation.scala:174)
+	at io.gatling.app.Runner.run0(Runner.scala:82)
+	at io.gatling.app.Runner.run(Runner.scala:52)
+	at io.gatling.app.Gatling$.start(Gatling.scala:80)
+	at io.gatling.app.Gatling$.fromMap(Gatling.scala:40)
+	at com.example.GatlingRunner$.main(GatlingRunner.scala:16)
+	at com.example.GatlingRunner.main(GatlingRunner.scala)
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_tcnative_linux_x86_64 in java.library.path
+		at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1875)
+		at java.lang.Runtime.loadLibrary0(Runtime.java:872)
+		at java.lang.System.loadLibrary(System.java:1124)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:385)
+		at java.security.AccessController.doPrivileged(Native Method)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:377)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:341)
+		... 34 common frames omitted
+16:16:36.689 [DEBUG] i.n.u.i.NativeLibraryLoader - Successfully loaded the library /tmp/libnetty_tcnative_linux_x86_642204557561612528799.so
+16:16:36.689 [DEBUG] i.n.h.s.OpenSsl - Initialize netty-tcnative using engine: 'default'
+16:16:36.689 [DEBUG] i.n.h.s.OpenSsl - netty-tcnative using native library: BoringSSL
+16:16:36.703 [DEBUG] i.n.u.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+16:16:36.703 [DEBUG] i.n.u.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+16:16:36.707 [DEBUG] i.n.b.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+16:16:36.707 [DEBUG] i.n.b.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+16:16:36.708 [DEBUG] i.n.u.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3f053c80
+16:16:36.714 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 24
+16:16:36.715 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 24
+16:16:36.715 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+16:16:36.715 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 11
+16:16:36.715 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 16777216
+16:16:36.715 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+16:16:36.715 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+16:16:36.715 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+16:16:36.715 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+16:16:36.715 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+16:16:36.715 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: true
+16:16:36.715 [DEBUG] i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+16:16:36.721 [DEBUG] i.n.b.ByteBufUtil - -Dio.netty.allocator.type: pooled
+16:16:36.721 [DEBUG] i.n.b.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+16:16:36.721 [DEBUG] i.n.b.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+16:16:36.724 [DEBUG] i.n.u.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@15eebbff
+16:16:36.728 [DEBUG] i.n.u.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+16:16:36.728 [DEBUG] i.n.u.Recycler - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+16:16:36.728 [DEBUG] i.n.u.Recycler - -Dio.netty.recycler.linkCapacity: 16
+16:16:36.728 [DEBUG] i.n.u.Recycler - -Dio.netty.recycler.ratio: 8
+16:16:36.728 [DEBUG] i.n.u.Recycler - -Dio.netty.recycler.delayedQueue.ratio: 8
+16:16:36.737 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+16:16:36.737 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+16:16:36.737 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+16:16:36.737 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+16:16:36.738 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+16:16:36.738 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+16:16:36.738 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+16:16:36.738 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+16:16:36.738 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+16:16:36.738 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+16:16:36.738 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+16:16:36.738 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+16:16:36.738 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+16:16:36.738 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+16:16:36.738 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+16:16:36.739 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+16:16:36.739 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+16:16:36.739 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+16:16:36.739 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+16:16:36.739 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+16:16:36.739 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+16:16:36.739 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+16:16:36.739 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+16:16:36.739 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+16:16:36.739 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+16:16:36.739 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: TLS_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+16:16:36.740 [DEBUG] i.n.h.s.CipherSuiteConverter - Cipher suite mapping: SSL_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+16:16:36.741 [DEBUG] i.n.h.s.OpenSsl - Supported protocols (OpenSSL): [SSLv2Hello, TLSv1, TLSv1.1, TLSv1.2, TLSv1.3] 
+16:16:36.741 [DEBUG] i.n.h.s.OpenSsl - Default cipher suites (OpenSSL): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+16:16:36.781 [DEBUG] i.g.h.e.HttpEngine - Start warm up
+16:16:36.808 [DEBUG] i.g.h.e.HttpEngine - Warm up done
+16:16:36.815 [DEBUG] i.g.h.c.Http2PriorKnowledgeSupport$ - HTTP/2 disabled
+16:16:36.817 [TRACE] i.g.app.Runner - Asking Controller to start
+16:16:36.820 [DEBUG] i.g.c.c.Controller - Setting up max duration
+16:16:36.821 [INFO ] i.g.c.s.w.LogFileDataWriter - Initializing
+16:16:36.822 [INFO ] i.g.c.s.w.ConsoleDataWriter - Initializing
+16:16:36.822 [INFO ] i.g.g.GraphiteDataWriter - Initializing
+16:16:36.826 [INFO ] i.g.c.s.w.ConsoleDataWriter - Initialized
+16:16:36.827 [INFO ] i.g.c.s.w.LogFileDataWriter - Initialized
+16:16:36.943 [INFO ] i.g.g.GraphiteDataWriter - Initialized
+16:16:36.956 [DEBUG] i.g.c.c.i.o.OpenWorkload - Injecting 1 users in scenario get hello world, continue=false
+16:16:36.957 [INFO ] i.g.c.c.i.Injector - Scenario get hello world has finished injecting
+16:16:36.957 [INFO ] i.g.c.c.i.Injector - Injecting is done
+16:16:36.977 [DEBUG] i.g.h.e.t.HttpTxExecutor - Sending request= uri=http://localhost:8080/: scenario=get hello world, userId=1
+16:16:36.999 [DEBUG] i.n.c.DefaultChannelId - -Dio.netty.processId: 146322 (auto-detected)
+16:16:36.999 [INFO ] i.g.g.s.TcpSender - Failed to connect to Graphite server located at: loclahost:2004
+16:16:37.000 [DEBUG] i.n.c.DefaultChannelId - -Dio.netty.machineId: b0:a4:60:ff:fe:17:6f:bf (auto-detected)
+16:16:37.034 [DEBUG] i.g.c.c.i.o.OpenWorkload - Start user #1
+16:16:37.041 [DEBUG] i.g.h.c.i.HttpAppHandler - Write request WritableRequest{request=DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeHeapByteBuf(ridx: 0, widx: 0, cap: 0))
+GET / HTTP/1.1
+accept-charset: utf-8
+accept: */*
+host: localhost:8080, content=null}
+16:16:37.048 [DEBUG] i.g.h.c.i.HttpAppHandler - Read msg='DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Server: nginx/1.20.1
+Date: Fri, 06 Aug 2021 13:16:37 GMT
+Content-Type: text/plain
+Content-Length: 12
+Connection: keep-alive'
+16:16:37.049 [DEBUG] i.g.h.c.i.HttpAppHandler - Read msg='DefaultLastHttpContent(data: PooledSlicedByteBuf(ridx: 0, widx: 12, cap: 12/12, unwrapped: PooledUnsafeDirectByteBuf(ridx: 160, widx: 160, cap: 2048)), decoderResult: success)'
+16:16:37.061 [TRACE] i.g.h.e.r.DefaultStatsProcessor - 
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+Request:
+: OK 
+=========================
+Session:
+Session(get hello world,1,Map(gatling.http.ssl.sslContexts -> io.gatling.http.util.SslContexts@4a6a7544, gatling.http.cache.dns -> io.gatling.http.resolver.ShufflingNameResolver@36c6473a, gatling.http.cache.baseUrl -> http://localhost:8080),OK,List(),io.gatling.core.protocol.ProtocolComponentsRegistry$$Lambda$362/637091966@320fd3ef,io.netty.channel.epoll.EpollEventLoop@3f9342d4)
+=========================
+HTTP request:
+GET http://localhost:8080/
+headers=
+accept-charset: utf-8
+accept: */*
+host: localhost:8080
+=========================
+HTTP response:
+status=
+200 OK
+headers= 
+Server: nginx/1.20.1
+Date: Fri, 06 Aug 2021 13:16:37 GMT
+Content-Type: text/plain
+Content-Length: 12
+Connection: keep-alive
+
+body=
+Hello World!
+<<<<<<<<<<<<<<<<<<<<<<<<<
+16:16:37.062 [DEBUG] i.g.c.a.Exit - End user #1
+16:16:37.065 [DEBUG] i.g.c.c.i.Injector - End user #get hello world
+16:16:37.065 [INFO ] i.g.c.c.i.Injector - All users of scenario get hello world are stopped
+16:16:37.066 [INFO ] i.g.c.c.i.Injector - Stopping
+16:16:37.066 [INFO ] i.g.c.c.Controller - Injector has stopped, initiating graceful stop
+16:16:37.079 [DEBUG] i.g.g.m.GraphiteMetrics$ - GraphiteMetrics=v2.gatling.test.localhost.testsimulation.users.allUsers.active 1 1628255797
+v2.gatling.test.localhost.testsimulation.users.allUsers.waiting 0 1628255797
+v2.gatling.test.localhost.testsimulation.users.allUsers.done 1 1628255797
+v2.gatling.test.localhost.testsimulation.users.get_hello_world.active 1 1628255797
+v2.gatling.test.localhost.testsimulation.users.get_hello_world.waiting 0 1628255797
+v2.gatling.test.localhost.testsimulation.users.get_hello_world.done 1 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.ok.count 1 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.ok.min 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.ok.max 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.ok.mean 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.ok.stdDev 0 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.ok.percentiles50 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.ok.percentiles75 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.ok.percentiles95 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.ok.percentiles99 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.ko.count 0 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.all.count 1 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.all.min 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.all.max 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.all.mean 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.all.stdDev 0 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.all.percentiles50 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.all.percentiles75 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.all.percentiles95 61 1628255797
+v2.gatling.test.localhost.testsimulation.allRequests.all.percentiles99 61 1628255797
+v2.gatling.test.localhost.testsimulation..ok.count 1 1628255797
+v2.gatling.test.localhost.testsimulation..ok.min 61 1628255797
+v2.gatling.test.localhost.testsimulation..ok.max 61 1628255797
+v2.gatling.test.localhost.testsimulation..ok.mean 61 1628255797
+v2.gatling.test.localhost.testsimulation..ok.stdDev 0 1628255797
+v2.gatling.test.localhost.testsimulation..ok.percentiles50 61 1628255797
+v2.gatling.test.localhost.testsimulation..ok.percentiles75 61 1628255797
+v2.gatling.test.localhost.testsimulation..ok.percentiles95 61 1628255797
+v2.gatling.test.localhost.testsimulation..ok.percentiles99 61 1628255797
+v2.gatling.test.localhost.testsimulation..ko.count 0 1628255797
+v2.gatling.test.localhost.testsimulation..all.count 1 1628255797
+v2.gatling.test.localhost.testsimulation..all.min 61 1628255797
+v2.gatling.test.localhost.testsimulation..all.max 61 1628255797
+v2.gatling.test.localhost.testsimulation..all.mean 61 1628255797
+v2.gatling.test.localhost.testsimulation..all.stdDev 0 1628255797
+v2.gatling.test.localhost.testsimulation..all.percentiles50 61 1628255797
+v2.gatling.test.localhost.testsimulation..all.percentiles75 61 1628255797
+v2.gatling.test.localhost.testsimulation..all.percentiles95 61 1628255797
+v2.gatling.test.localhost.testsimulation..all.percentiles99 61 1628255797
+
+16:16:37.085 [DEBUG] i.g.c.c.Controller - StatsEngine was stopped
+16:16:37.086 [TRACE] i.g.app.Runner - After hooks executed
+16:16:37.089 [DEBUG] i.n.b.PoolThreadCache - Freed 2 thread-local buffer(s) from thread: gatling-1-1
+16:16:37.138 [INFO ] i.g.c.s.LogFileReader - Collected ArrayBuffer(/home/savvagenchevskiy/IdeaProjects/svitla-demo/results/testsimulation-20210806131636652/simulation.log) from testsimulation-20210806131636652
+16:16:37.146 [INFO ] i.g.c.s.LogFileReader - First pass
+16:16:37.151 [INFO ] i.g.c.s.LogFileReader - First pass done: read 4 lines
+16:16:37.159 [INFO ] i.g.c.s.LogFileReader - Second pass
+16:16:37.177 [INFO ] i.g.c.s.LogFileReader - Second pass: read 4 lines
