@@ -20,6 +20,6 @@ Hello World!
 * Grafana - [Light Report](http://localhost:3000/d/u/gatling-lite?orgId=1)
 * Grafana - [Node Exporter Metrics](http://localhost:3000/d/rYdddlPWk/node-exporter-full?orgId=1&refresh=1m&from=now-30m&to=now)
 
-## 4. Cleanup Environment:
+## 4. Environment cleanup:
 * navigate to `gatling-pet-project` folder
 * run command `docker-compose down`
