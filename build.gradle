@@ -79,12 +79,12 @@ gatling {
 }
 
 
-//task gatlingRunner(type: JavaExec, dependsOn: classes) {
-//    main = 'absoft.com.beats.GatlingRunner'
-//    classpath sourceSets.gatling.runtimeClasspath
-//    classpath configurations.runtime
-//    jvmArgs = ['-server', '-Xms7g', '-Xmx9g', '-XX:-UseGCOverheadLimit']
-//}
+task gatlingRunner(type: JavaExec, dependsOn: classes) {
+    main = 'com.example.GatlingRunner'
+    classpath sourceSets.gatling.runtimeClasspath
+    classpath configurations.runtime
+    jvmArgs = ['-server', '-Xms7g', '-Xmx9g', '-XX:-UseGCOverheadLimit']
+}
 
 wrapper {
     gradleVersion = "6.1"
