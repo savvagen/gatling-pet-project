@@ -83,7 +83,7 @@ task gatlingRunner(type: JavaExec, dependsOn: classes) {
     main = 'com.example.GatlingRunner'
     classpath sourceSets.gatling.runtimeClasspath
     classpath configurations.runtime
-    jvmArgs = ['-server', '-Xms7g', '-Xmx9g', '-XX:-UseGCOverheadLimit']
+    jvmArgs = ['-server', '-Xms3g', '-Xmx5g', '-XX:-UseGCOverheadLimit']
 }
 
 wrapper {
