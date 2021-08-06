@@ -10,7 +10,7 @@ Expected Output:
 Hello World!
 ```
 
-Grafana Dashboard will be accessible by address: http://127.0.0.1:3000/
+Grafana Dashboards will be accessible by address: http://127.0.0.1:3000/
 
 ## 2. Running 5 min. Load Test
 
