@@ -7,7 +7,7 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: app/nginx/Dockerfile
+      dockerfile: nginx/Dockerfile
     ports:
       - "8080:80"
     deploy:
