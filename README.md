@@ -1,6 +1,10 @@
+## Requirements:
+* Java 8
+* Gradle 6.1
+
 ## 1. Application and Monitoring Setup:
  - `git clone https://github.com/savvagen/gatling-pet-project.git`
- - `docker-compose buid`
+ - `docker-compose build`
  - `docker-compose up -d`
 
 Now application is available by: http://127.0.0.1:8080/

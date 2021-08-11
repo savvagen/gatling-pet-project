@@ -6,7 +6,7 @@ services:
     image: hello_world_app:latest
     restart: always
     build:
-      context: app
+      context: .
       dockerfile: app/nginx/Dockerfile
     ports:
       - "8080:80"
