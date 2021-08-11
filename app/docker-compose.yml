@@ -30,7 +30,7 @@ services:
       - '--web.console.templates=/etc/prometheus/consoles'
       - '--storage.tsdb.retention.time=90d'
     volumes:
-      - ./app/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       # - ./prometheus/rules/hosts_rules.yml:/etc/prometheus/hosts_rules.yml
     ports:
       - "9090:9090"
@@ -66,8 +66,8 @@ services:
       - GF_INSTALL_PLUGINS=michaeldmoore-multistat-panel,grafana-piechart-panel,yesoreyeram-boomtable-panel
     volumes:
       - grafana:/var/lib/grafana
-      - ./app/grafana/datasources:/etc/grafana/provisioning/datasources
-      - ./app/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
     restart: always
 
   influxdb:
@@ -78,7 +78,7 @@ services:
       - INFLUXDB_CONFIG_PATH=/tmp/influxdb/influxdb.conf
       - INFLUXDB_DB=testdb
     volumes:
-      - ./app/influxdb:/tmp/influxdb
+      - ./influxdb:/tmp/influxdb
       - influx:/var/lib/influxdb
     ports:
       - 8086:8086
