@@ -21,7 +21,7 @@ class TestSimulation extends Simulation {
         .check(bodyString.is("Hello World!"))
     )
 
-  setUp(testScn.inject(constantUsersPerSec(20) during(5.minutes))
+  setUp(testScn.inject(constantUsersPerSec(10) during(5.minutes))
     .throttle(
       reachRps(10) in(20 seconds),
       holdFor(5.minutes)
